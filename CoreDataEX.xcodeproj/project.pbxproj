@@ -14,6 +14,8 @@
 		688112292D0B2C3E009DB784 /* CoreDataEX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 688112272D0B2C3E009DB784 /* CoreDataEX.xcdatamodeld */; };
 		6881122B2D0B2C3E009DB784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6881122A2D0B2C3E009DB784 /* Assets.xcassets */; };
 		6881122E2D0B2C3E009DB784 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6881122D2D0B2C3E009DB784 /* Base */; };
+		6881123B2D0C70C8009DB784 /* Yegr+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688112392D0C70C8009DB784 /* Yegr+CoreDataClass.swift */; };
+		6881123C2D0C70C8009DB784 /* Yegr+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881123A2D0C70C8009DB784 /* Yegr+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6881122A2D0B2C3E009DB784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6881122D2D0B2C3E009DB784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6881122F2D0B2C3E009DB784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688112392D0C70C8009DB784 /* Yegr+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yegr+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6881123A2D0C70C8009DB784 /* Yegr+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yegr+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		688112122D0B2C3E009DB784 = {
 			isa = PBXGroup;
 			children = (
+				688112392D0C70C8009DB784 /* Yegr+CoreDataClass.swift */,
+				6881123A2D0C70C8009DB784 /* Yegr+CoreDataProperties.swift */,
 				6881121D2D0B2C3E009DB784 /* CoreDataEX */,
 				6881121C2D0B2C3E009DB784 /* Products */,
 			);
@@ -143,6 +149,8 @@
 			files = (
 				688112232D0B2C3E009DB784 /* ViewController.swift in Sources */,
 				6881121F2D0B2C3E009DB784 /* AppDelegate.swift in Sources */,
+				6881123B2D0C70C8009DB784 /* Yegr+CoreDataClass.swift in Sources */,
+				6881123C2D0C70C8009DB784 /* Yegr+CoreDataProperties.swift in Sources */,
 				688112212D0B2C3E009DB784 /* SceneDelegate.swift in Sources */,
 				688112292D0B2C3E009DB784 /* CoreDataEX.xcdatamodeld in Sources */,
 			);
