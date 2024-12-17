@@ -13,6 +13,7 @@ final class CoreDataView: UIView {
     let genderTextField = UITextField()
     let ageTextField = UITextField()
     let saveButton = UIButton()
+    let resetButton = UIButton()
     let tableView = UITableView()
     
     override init(frame: CGRect) {
@@ -30,6 +31,7 @@ final class CoreDataView: UIView {
         addSubview(genderTextField)
         addSubview(ageTextField)
         addSubview(saveButton)
+        addSubview(resetButton)
         addSubview(tableView)
     }
     
@@ -54,13 +56,19 @@ final class CoreDataView: UIView {
         }
         
         saveButton.snp.makeConstraints {
-            $0.top.equalTo(ageTextField.snp.bottom)
+            $0.top.equalTo(ageTextField.snp.bottom).offset(-1)
+            $0.horizontalEdges.equalTo(safeArea)
+            $0.height.equalTo(35)
+        }
+        
+        resetButton.snp.makeConstraints {
+            $0.top.equalTo(saveButton.snp.bottom).offset(-1)
             $0.horizontalEdges.equalTo(safeArea)
             $0.height.equalTo(35)
         }
         
         tableView.snp.makeConstraints {
-            $0.top.equalTo(saveButton.snp.bottom)
+            $0.top.equalTo(resetButton.snp.bottom)
             $0.horizontalEdges.bottom.equalTo(safeArea)
         }
     }
@@ -88,10 +96,17 @@ final class CoreDataView: UIView {
         ageTextField.layer.borderWidth = 1
         ageTextField.layer.borderColor = UIColor.lightGray.cgColor
         ageTextField.placeholder = "나이를 입력해주세요."
-
         
         saveButton.setTitle("저장", for: .normal)
         saveButton.setTitleColor(.black, for: .normal)
         saveButton.backgroundColor = .systemGray5
+        saveButton.layer.borderWidth = 1
+        saveButton.layer.borderColor = UIColor.lightGray.cgColor
+        
+        resetButton.setTitle("전체 삭제", for: .normal)
+        resetButton.setTitleColor(.systemRed, for: .normal)
+        resetButton.backgroundColor = .systemGray5
+        resetButton.layer.borderWidth = 1
+        resetButton.layer.borderColor = UIColor.lightGray.cgColor
     }
 }

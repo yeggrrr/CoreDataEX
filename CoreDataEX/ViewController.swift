@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         configureTableView()
         configurePersistentContainer()
         configureAction()
-        fetchData()
     }
     
     private func configureTableView() {
@@ -66,8 +65,23 @@ class ViewController: UIViewController {
         return nil
     }
     
+    private func resetData() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Yegr")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try container.viewContext.execute(deleteRequest)
+            try container.viewContext.save()
+        } catch {
+            print("Error deleting data: \(error)")
+        }
+        
+        coreDataView.tableView.reloadData()
+    }
+    
     private func configureAction() {
         coreDataView.saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+        coreDataView.resetButton.addTarget(self, action: #selector(resetButtonClicked), for: .touchUpInside)
     }
     
     @objc func saveButtonClicked() {
@@ -78,6 +92,10 @@ class ViewController: UIViewController {
         )
         
         coreDataView.tableView.reloadData()
+    }
+    
+    @objc func resetButtonClicked() {
+        resetData()
     }
 }
 
