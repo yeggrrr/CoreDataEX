@@ -71,7 +71,6 @@ class ViewController: UIViewController {
 
         do {
             try container.viewContext.execute(deleteRequest)
-            try container.viewContext.save()
         } catch {
             print("Error deleting data: \(error)")
         }
@@ -91,6 +90,10 @@ class ViewController: UIViewController {
             age: Int(coreDataView.ageTextField.text ?? "") ?? 0
         )
         
+        coreDataView.nameTextField.text = ""
+        coreDataView.genderTextField.text = ""
+        coreDataView.ageTextField.text = ""
+        
         coreDataView.tableView.reloadData()
     }
     
@@ -101,7 +104,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 35
+        return 45
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
