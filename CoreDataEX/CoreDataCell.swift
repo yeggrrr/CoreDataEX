@@ -37,7 +37,7 @@ final class CoreDataCell: UITableViewCell {
     
     func setConstraints() {
         infoStackView.snp.makeConstraints {
-            $0.edges.equalTo(contentView.safeAreaLayoutGuide)
+            $0.edges.equalTo(contentView.safeAreaLayoutGuide).inset(10)
         }
     }
     

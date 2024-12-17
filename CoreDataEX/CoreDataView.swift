@@ -80,7 +80,7 @@ final class CoreDataView: UIView {
         genderTextField.leftViewMode = .always
         genderTextField.layer.borderWidth = 1
         genderTextField.layer.borderColor = UIColor.lightGray.cgColor
-        genderTextField.placeholder = "성별을 입력해주세요. (M/F)"
+        genderTextField.placeholder = "성별을 입력해주세요. (M / F)"
 
         let agePaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: ageTextField.frame.height))
         ageTextField.leftView = agePaddingView
